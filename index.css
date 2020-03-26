@@ -9,7 +9,7 @@ body{
   background: #ffffff;
   width: 100%;
   height: 100%;
-  min-width: 1900px;
+  min-width: 1000px;
 }
 .page-header{
   height: 570px;
@@ -33,11 +33,11 @@ body{
 .header-banner{
   position: relative;
   height: 426px;
-  background-image: url(./images/banner.jpg);
+  background: url(./images/banner.jpg)no-repeat center / 1920px auto;
 }
 .banner-text{
   position: absolute;
-  left: 658px;
+  left: 416px;
   top: 169px;
   width:619px;
   height:45px;
@@ -352,6 +352,7 @@ line-height:18px;
 .teachers-cont{
   position: relative;
   margin-top: 61px;
+  overflow: hidden;
 }
 .teach-list{
   display: flex;
@@ -360,6 +361,7 @@ line-height:18px;
   width: 240px;
   height: 210px;
   text-align: center;
+  padding-right: 50px;
 }
 .name{
   font-size: 14px;
