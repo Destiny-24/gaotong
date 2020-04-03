@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="../swiper-4.5.3/dist/css/swiper.min.css">
   <title>高通专题</title>
 </head>
 <body>
@@ -153,41 +154,43 @@
     </div>
     <div class="teachers-cont" id="teachers">
       <img class="tit-teach" src="./images/sub-title-teacher.jpg" alt="">
-      <div class="teach-list" id="teach-list">
-        <div class="teach-item">
-          <img class="avatar" src="./images/t_1.jpg" alt="">
-          <h3 class="name">1</h3>
-          <p class="sub-title">中科创达软件工程师
-            <br>
-            Qualcomm开发者社区技术支持</p>
-          <p class="teach-Intr">从事安卓驱动研究，专注于display驱动研发，在嵌入式软件开发上有...</p>
+      <div class="swiper-container">
+        <div class="swiper-wrapper" id="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="avatar" src="./images/t_1.jpg" alt="">
+            <h3 class="name">1</h3>
+            <p class="sub-title">中科创达软件工程师
+              <br>
+              Qualcomm开发者社区技术支持</p>
+            <p class="teach-Intr">从事安卓驱动研究，专注于display驱动研发，在嵌入式软件开发上有...</p>
+          </div>
+          <div class="swiper-slide">
+            <img class="avatar" src="./images/t_2.jpg" alt="">
+            <h3 class="name">2</h3>
+            <p class="sub-title">中科创达软件工程师
+              <br>
+              Qualcomm开发者社区技术支持</p>
+            <p class="teach-Intr">软件研发从业3年，专注android驱动软件研发。</p>
+          </div>
+          <div class="swiper-slide">
+            <img class="avatar" src="./images/t_3.jpg" alt="">
+            <h3 class="name">3</h3>
+            <p class="sub-title">中科创达软件工程师</p>
+            <p class="teach-Intr">专注于Android底层驱动开发，有一定的Linux驱动开发经验。</p>
+          </div>
+          <div class="swiper-slide">
+            <img class="avatar" src="./images/t_4.jpg" alt="">
+            <h3 class="name">4</h3>
+            <p class="sub-title">中科创达软件工程师</p>
+            <p class="teach-Intr">软件研发从业3年，专注android驱动软件研发。</p>
+          </div>
         </div>
-        <div class="teach-item">
-          <img class="avatar" src="./images/t_2.jpg" alt="">
-          <h3 class="name">2</h3>
-          <p class="sub-title">中科创达软件工程师
-            <br>
-            Qualcomm开发者社区技术支持</p>
-          <p class="teach-Intr">软件研发从业3年，专注android驱动软件研发。</p>
+        <div class="swiper-button-prev" id= 'teach-left'>
+          <i class="arrow"></i>
         </div>
-        <div class="teach-item">
-          <img class="avatar" src="./images/t_3.jpg" alt="">
-          <h3 class="name">3</h3>
-          <p class="sub-title">中科创达软件工程师</p>
-          <p class="teach-Intr">专注于Android底层驱动开发，有一定的Linux驱动开发经验。</p>
+        <div class="swiper-button-next" id= 'teach-right'>
+          <i class="arrow-turn"></i>
         </div>
-        <div class="teach-item">
-          <img class="avatar" src="./images/t_4.jpg" alt="">
-          <h3 class="name">4</h3>
-          <p class="sub-title">中科创达软件工程师</p>
-          <p class="teach-Intr">软件研发从业3年，专注android驱动软件研发。</p>
-        </div>
-      </div>
-      <div class="teachers-arrow-left" id= 'teach-left'>
-        <i class="arrow"></i>
-      </div>
-      <div class="teachers-arrow-right" id= 'teach-right'>
-        <i class="arrow-turn"></i>
       </div>
     </div>
     <div class="products-cont" id="products">
@@ -248,5 +251,17 @@
     </div> 
   </div>
   <script src="./index.js"></script>
+  <script src="../swiper-4.5.3/dist/js/swiper.min.js"></script>
+  <script src='./countDown.js'></script>
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
 </body>
 </html>
